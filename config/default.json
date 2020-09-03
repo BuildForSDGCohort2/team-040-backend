@@ -1,0 +1,7 @@
+{
+    "mongoURI":
+        "mongodb+srv://user:propertease123@propertease-db1.s77lt.mongodb.net/propertease-DB1?retryWrites=true&w=majority",
+    "MAILGUN_USER": "postmaster@sandbox1ed656ec58dd419183d89a0435ce18b6.mailgun.org",
+    "MAILGUN_PW": "a2173dc2fc402177cb6c51b33bf1d8bd-4497bd1d-cd62fdfa"
+}
+

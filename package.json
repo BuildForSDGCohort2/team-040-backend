@@ -1,0 +1,45 @@
+{
+  "name": "team-040-backend",
+  "version": "1.0.0",
+  "description": "[![Codacy Badge](https://api.codacy.com/project/badge/Grade/82197b0db36a4799a50866b7abbd25c6)](https://app.codacy.com/gh/BuildForSDGCohort2/team-040-backend?utm_source=github.com&utm_medium=referral&utm_content=BuildForSDGCohort2/team-040-backend&utm_campaign=Badge_Grade_Settings)",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BuildForSDGCohort2/team-040-backend.git"
+  },
+  "author": "Wisdom Egenuka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BuildForSDGCohort2/team-040-backend/issues"
+  },
+  "homepage": "https://github.com/BuildForSDGCohort2/team-040-backend#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "mongoose": "^5.10.2",
+    "nodemailer": "^6.4.11",
+    "nodemailer-sendgrid-transport": "^0.2.0",
+    "validation": "0.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "nodemonConfig": {
+    "restartable": "rs",
+    "ignore": [
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env": {
+      "NODE_ENV": "development",
+      "PORT": 4000
+    }
+  }
+}
