@@ -1,11 +1,12 @@
 const crypto = require('crypto');
 const nodemailer = require('nodemailer');
-const config = require('config');
+const express = require('express');
+//const config = require('config');
 
 function usersController(User, verifyToken) {
 
-    const MAILGUN_USER = config.get('MAILGUN_USER');
-    const MAILGUN_PW = config.get('MAILGUN_PW');
+    // const MAILGUN_USER = config.get('MAILGUN_USER');
+    // const MAILGUN_PW = config.get('MAILGUN_PW');
 
     function get(req, res) {
         const response = { hello: "This is my user API!! /n Should be displaying List of Users but not yet!." };
@@ -34,23 +35,25 @@ function usersController(User, verifyToken) {
                 }
 
                 // Send the email
-                var transporter = nodemailer.createTransport({ service: 'Sendgrid', auth: { user: process.env.SENDGRID_USERNAME, pass: process.env.SENDGRID_PASSWORD } });
+                // var transporter = nodemailer.createTransport({ service: 'Sendgrid', auth: { user: process.env.SENDGRID_USERNAME, pass: process.env.SENDGRID_PASSWORD } });
 
+                /*
                 var transporter = nodemailer.createTransport({
                     host: "smtp.mailtrap.io",
                     port: 2525,
                     auth: { user: "fbf373ec368386", pass: "6931f68f50a1a9" }
                 });
+                */
 
 
-                /*var transporter = nodemailer.createTransport({
+                var transporter = nodemailer.createTransport({
                   host: "smtp.mailgun.org",
                   port: 587,
                   auth: {
-                    user: MAILGUN_USER,
-                    pass: MAILGUN_PW
+                    user: process.env.MAILGUN_USER,
+                    pass: process.env.MAILGUN_PW
                   }
-                });*/
+                });
 
                 var mailOptions = {
                     from: 'no-reply@propertease.com',
